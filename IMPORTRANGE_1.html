@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMPORTRANGE数式ジェネレーター</title>
+  <link rel="stylesheet" href="IMPORTRANGE_1.css">
+</head>
+<body>
+  <div class="container">
+    <h1>IMPORTRANGE関数数式ジェネレーター</h1>
+    <form id="importForm">
+      <div class="form-group">
+        <label for="url">GoogleスプレッドシートURL:</label>
+        <input type="url" id="url" name="url" placeholder="https://docs.google.com/spreadsheets/..." required>
+        <div id="urlError" class="error-message"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="sheet">シート名:</label>
+        <input type="text" id="sheet" name="sheet" placeholder="Sheet1" required>
+        <div id="sheetError" class="error-message"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="startCell">開始セル:</label>
+        <input type="text" id="startCell" name="startCell" placeholder="A1" required>
+        <div id="startCellError" class="error-message"></div>
+      </div>
+
+      <div class="form-group">
+        <label for="endCell">終了セル:</label>
+        <input type="text" id="endCell" name="endCell" placeholder="D10" required>
+        <div id="endCellError" class="error-message"></div>
+      </div>
+
+      <button type="submit" class="submit-btn">数式を生成</button>
+    </form>
+
+    <h2>生成されたIMPORTRANGE数式:</h2>
+    <p id="formulaOutput"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
